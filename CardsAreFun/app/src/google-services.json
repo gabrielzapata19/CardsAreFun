@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1048205987886",
+    "firebase_url": "https://cardsarefun-8eb34.firebaseio.com",
+    "project_id": "cardsarefun-8eb34",
+    "storage_bucket": "cardsarefun-8eb34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048205987886:android:193880d92f821efbc10fbf",
+        "android_client_info": {
+          "package_name": "com.example.cardsarefun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048205987886-oc5t7blei9e8glem2e6mcjkhsv8je31k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC39MQSAwxk8CsZchDSEmO1o-9OzSsq-y8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048205987886-oc5t7blei9e8glem2e6mcjkhsv8je31k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
