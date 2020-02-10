@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         //Going to do something with this. Load current user if already logined in
-        FirebaseUser currentUser = myFirebasAuth.getCurrentUser();
+        //FirebaseUser currentUser = myFirebasAuth.getCurrentUser();
         //Then load the users card info for later
         //Hello there
     }
