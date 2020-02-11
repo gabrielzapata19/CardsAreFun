@@ -60,6 +60,8 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
+                                FirebaseDatabaseManager.getInstance()
+                                        .addUser(myFirebaseAuth.getCurrentUser().getUid(), User.getCurrentUser());
                                 startActivity(new Intent(RegisterActivity.this,HomeActivity.class));
                             }else{
                                 Toast.makeText(RegisterActivity.this, "User Creation was unsuccessfull", Toast.LENGTH_SHORT).show();

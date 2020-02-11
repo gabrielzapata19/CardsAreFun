@@ -21,6 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         logoutBtn = findViewById(R.id.logoutBtn);
+        FirebaseDatabaseManager.getInstance().getUserSetList();
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
