@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class FirebaseDatabaseManager {
 
     private static FirebaseDatabaseManager manager = null;
-    private FirebaseDatabase database = null;
+    private FirebaseDatabase database;
 
     public static FirebaseDatabaseManager getInstance(){
         if(manager == null){
@@ -36,7 +36,7 @@ public class FirebaseDatabaseManager {
         DatabaseReference userSetsRef = database.getReference()
                 .child("users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("userSets");
+                .child("userSetList");
 
         ValueEventListener listener = new ValueEventListener() {
             @Override
@@ -63,6 +63,7 @@ public class FirebaseDatabaseManager {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ArrayList<CardSet> availableCardSets = new ArrayList<>();
                 for (DataSnapshot child: dataSnapshot.getChildren()) {
                     if(User.getCurrentUser().userSetList.contains(child.getKey())){
                         ArrayList<String> blackCards = new ArrayList<>();
@@ -77,10 +78,10 @@ public class FirebaseDatabaseManager {
                         }
 
                         CardSet cs = new CardSet(child.getKey(),blackCards,whiteCards);
-
-                        User.getCurrentUser().userCardSets.add(cs);
+                        availableCardSets.add(cs);
                     }
                 }
+                        User.getCurrentUser().setUserCardSets(availableCardSets);
             }
 
             @Override
