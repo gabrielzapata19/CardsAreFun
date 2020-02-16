@@ -92,4 +92,9 @@ public class FirebaseDatabaseManager {
 
         cardListRef.addValueEventListener(listener);
     }
+
+    public void addGame(String _GID, Game _game){
+        DatabaseReference ref = database.getReference();
+        ref.child("games").child(_GID).setValue(_game);
+    }
 }

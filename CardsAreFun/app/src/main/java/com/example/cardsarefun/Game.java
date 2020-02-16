@@ -10,25 +10,39 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Game {
-     public String gameID = getGameID();
+     private String gameID = getGameID();
 
-     public GameState gameState = null;
+     public GameState gameState;
 
-     public ArrayList<String> gameSetList = null;
+     public ArrayList<String> gameSetList;
+
+     public Game(){
+         gameSetList = new ArrayList<>();
+         gameSetList.add("set-one");
+
+         gameState = new GameState();
+     }
 
      String getGameID(){
          FirebaseUser currentUser= null;
+         String timeStamp = null;
          try{
              currentUser = FirebaseAuth.getInstance().getCurrentUser();
              DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
              LocalDateTime now = LocalDateTime.now();
-             gameID = formatter.format(now);
+             timeStamp = formatter.format(now);
          }
          catch(NullPointerException n){
              Log.d("DEBUG", "Current User is null. GameID not made.");
          }
-         return gameID + "-" + currentUser.getUid();
+         gameID = timeStamp + "-" + currentUser.getUid();
+         return gameID;
      };
+
+     //Not sure if this will be used
+     public void setGameState(GameState _gameState){
+         gameState = _gameState;
+     }
 
 
 
