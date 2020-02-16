@@ -1,6 +1,9 @@
 package com.example.cardsarefun;
 
-public enum  Type {
-    Points, Rounds, Time;
+public class Type {
+    boolean points = true;
+    boolean rounds = false;
+    boolean time = false;
+
 
 }

@@ -10,20 +10,26 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Game {
-     private String gameID = getGameID();
+     private String gameID;
 
      public GameState gameState;
 
      public ArrayList<String> gameSetList;
 
      public Game(){
-         gameSetList = new ArrayList<>();
-         gameSetList.add("set-one");
+         if(gameID == null){
+             gameSetList = new ArrayList<>();
+             gameSetList.add("set-one");
+             gameState = new GameState();
+             gameID = getNewGameID();
+         }
 
-         gameState = new GameState();
+     }
+     public String getGameID(){
+         return gameID;
      }
 
-     String getGameID(){
+     private String getNewGameID(){
          FirebaseUser currentUser= null;
          String timeStamp = null;
          try{

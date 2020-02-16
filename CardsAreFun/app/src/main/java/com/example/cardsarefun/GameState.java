@@ -10,16 +10,19 @@ public class GameState {
     public Type type;
     public int currentRound = 0;
 
-    //public ArrayLis<Cards>;
+    public CardsPlayed cardsPlayed;
     public long timePlayed = 0;
 
-    public ArrayList<String> players;
+    public ArrayList<Player> players;
 
     GameState(){
-        type = type.Points;
         if(players == null){
+            Player player = new Player();
+            cardsPlayed  = new CardsPlayed();
+            type = new Type();
             try{
-                players.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                player.playerID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                players.add(player);
             }catch (NullPointerException n){
                 n.printStackTrace();
             }
@@ -27,10 +30,6 @@ public class GameState {
 
 
     }
-
-
-
-
 
 
 }

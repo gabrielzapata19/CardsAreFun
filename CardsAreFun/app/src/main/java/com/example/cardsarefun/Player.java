@@ -4,16 +4,17 @@ import java.util.ArrayList;
 
 public class Player {
     public String playerID;
-    public ArrayList<CardSet> hand = null;
+    public ArrayList<String> hand;
     public int points = 0;
     public boolean isWinner = false;
 
-    public void setPlayerID(String _PID){
-        playerID = _PID;
-    }
-    public String getPlayerID(){
-        return playerID;
-    }
+   Player(){
+       if(hand == null){
+           hand = new ArrayList<String>();
+           hand.add("Test players starting hand");
+           hand.add("We will place card ID here");
+       }
+   }
 
 
 }
