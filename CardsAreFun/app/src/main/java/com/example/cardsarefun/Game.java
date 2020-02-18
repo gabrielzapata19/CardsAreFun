@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Game {
 
     @Exclude
-     private String gameID;
+     public String gameID;
 
      public GameState gameState;
 
@@ -29,6 +29,7 @@ public class Game {
 
      }
 
+     @Exclude
      public String getGameID(){
          return gameID;
      }
