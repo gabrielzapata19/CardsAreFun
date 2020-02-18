@@ -10,25 +10,44 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="288dp"
-        android:layout_marginEnd="79dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="95dp"
         android:text="Hello from Create Game Activity"
+        app:layout_constraintBottom_toTopOf="@+id/createGameButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/mainMenuButton"
+        android:id="@+id/createGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginTop="99dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="277dp"
-        android:text="Back to main menu"
+        android:text="Create Game"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/mainMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="192dp"
+        android:text="Back to main menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createGameButton" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
