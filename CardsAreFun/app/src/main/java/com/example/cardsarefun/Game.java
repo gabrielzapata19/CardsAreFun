@@ -4,12 +4,15 @@ import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.Exclude;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Game {
+
+    @Exclude
      private String gameID;
 
      public GameState gameState;
@@ -25,6 +28,7 @@ public class Game {
          }
 
      }
+
      public String getGameID(){
          return gameID;
      }

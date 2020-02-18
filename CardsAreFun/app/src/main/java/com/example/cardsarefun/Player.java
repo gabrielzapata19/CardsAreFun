@@ -16,5 +16,15 @@ public class Player {
        }
    }
 
+    public void addCardToHand(String card) {
+        this.hand.add(card);
+    }
 
+    public void setPlayerID(String playerID) {
+        this.playerID = playerID;
+    }
+
+    public String getPlayerID() {
+        return playerID;
+    }
 }

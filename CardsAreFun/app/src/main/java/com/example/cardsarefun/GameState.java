@@ -13,15 +13,15 @@ public class GameState {
     public CardsPlayed cardsPlayed;
     public long timePlayed = 0;
 
-    public ArrayList<Player> players;
+    public ArrayList<Player> players = new ArrayList<>();
 
     GameState(){
-        if(players == null){
+        if(players.isEmpty()){
             Player player = new Player();
             cardsPlayed  = new CardsPlayed();
             type = new Type();
             try{
-                player.playerID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                player.setPlayerID(FirebaseAuth.getInstance().getCurrentUser().getUid());
                 players.add(player);
             }catch (NullPointerException n){
                 n.printStackTrace();
