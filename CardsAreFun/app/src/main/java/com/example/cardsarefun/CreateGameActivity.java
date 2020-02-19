@@ -35,8 +35,9 @@ public class CreateGameActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Game game = new Game();
                 FirebaseDatabaseManager.getInstance().addGame(game);
-                //TODO startActivity(new Intent(CreateGameActivity.this,GameBoardActivity.class));
                 Log.i("CREATE GAME", "New game was made");
+                startActivity(new Intent(CreateGameActivity.this,GameBoardActivity.class));
+
             }
         });
 
