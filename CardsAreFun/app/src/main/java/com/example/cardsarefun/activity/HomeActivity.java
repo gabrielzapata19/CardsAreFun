@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.cardsarefun.util.FirebaseDatabaseManager;
+import com.example.cardsarefun.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {

@@ -1,7 +1,10 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.util;
 
 import androidx.annotation.NonNull;
 
+import com.example.cardsarefun.pojos.CardSet;
+import com.example.cardsarefun.pojos.Game;
+import com.example.cardsarefun.pojos.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.cardsarefun.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class SplashActivity extends AppCompatActivity {
     private FirebaseAuth myFirebasAuth;

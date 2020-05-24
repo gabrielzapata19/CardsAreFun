@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.pojos;
 
 public class Type {
     boolean points = true;

@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.cardsarefun.util.FirebaseDatabaseManager;
+import com.example.cardsarefun.pojos.Game;
+import com.example.cardsarefun.R;
 
 public class CreateGameActivity extends AppCompatActivity {
 

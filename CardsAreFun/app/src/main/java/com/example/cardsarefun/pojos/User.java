@@ -1,6 +1,4 @@
-package com.example.cardsarefun;
-
-import androidx.core.util.Pair;
+package com.example.cardsarefun.pojos;
 
 import java.util.ArrayList;
 

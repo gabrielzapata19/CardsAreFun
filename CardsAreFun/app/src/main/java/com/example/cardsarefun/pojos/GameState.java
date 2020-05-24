@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.pojos;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -13,7 +13,7 @@ public class GameState {
     public CardsPlayed cardsPlayed;
     public long timePlayed = 0;
 
-    public ArrayList<Player> players = new ArrayList<>();
+    public ArrayList<Player> players;
 
     GameState(){
         if(players.isEmpty()){

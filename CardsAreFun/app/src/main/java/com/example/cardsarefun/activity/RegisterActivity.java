@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cardsarefun.util.FirebaseDatabaseManager;
+import com.example.cardsarefun.pojos.User;
+import com.example.cardsarefun.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

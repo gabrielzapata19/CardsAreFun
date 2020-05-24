@@ -1,4 +1,4 @@
-package com.example.cardsarefun;
+package com.example.cardsarefun.pojos;
 
 import java.util.ArrayList;
 
